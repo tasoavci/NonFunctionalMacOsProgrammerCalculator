@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>macOs programmer calculator</title>
+    <link 
+    rel="stylesheet"
+    href="./dist/output.css">
+</head>
+<body class="bg-black h-[700px] flex justify-center items-center">
+    
+    <!-- buttons and 0 section -->
+    <div class="border-t-[rgb(104,104,104)] border-t-[1px] border-x-[rgb(77,77,77)] border-x-[1px] border-b-[rgb(121,121,121)] border-b-[1px]  rounded-xl">
+        <div class=" rounded-t-xl col-span-7 flex py-[7px] pl-1 group h-[20px] bg-[rgb(39,39,38)] ">
+            
+            <button class=" cursor-default select-none flex items-center justify-center rounded-full h-[12px] w-[12px] ml-1 bg-[rgb(255,95,87)] active:bg-[rgb(255,141,133)]  font-bold text-opacity-0 text-[10px] text-red-900 hover:text-opacity-100 group-hover:text-opacity-100">
+                <span class="mb-[1px]">×</span>
+            </button>
+            <button class=" cursor-default select-none flex items-center justify-center rounded-full  h-[12px] w-[12px] bg-[rgb(255,188,46)] active:bg-[rgb(255,233,92)] mx-2 font-bold text-[10px] text-opacity-0 hover:text-opacity-100 text-amber-900 group-hover:text-opacity-100">
+                <span class="mb-[1px]">-</span>
+            </button>
+            <button class="  cursor-default select-none flex items-center justify-center rounded-full h-[12px] w-[12px]  bg-[rgb(43,200,64)] active:bg-[rgb(86,244,110)] font-bold text-[10px] text-opacity-0 hover:text-opacity-100 text-green-900 group-hover:text-opacity-100">
+                <span class="mb-[1px]">+</span>
+            </button>
+        
+        </div>
+        <div class=" col-span-10 bg-[rgb(39,39,38)] text-[rgb(233,233,233)] cursor-default select-none font-extralight h-[62px] flex items-center justify-end text-[46px] box-border pr-[14px] border-b-[rgb(90,90,90)] border-b-[0.1px] border-opacity-50">0</div>
+        
+
+    <!-- 2nd section -->
+    <div class="bg-[rgb(39,39,38)] py-[13px] px-[16px] ">
+        <!-- ascii and unicode -->
+        <div class="flex justify-between">
+        <div class="flex">
+            <button class="bg-[rgb(13,13,13)] cursor-default select-none active:bg-[rgb(107,107,107)] focus:bg-[rgb(74,74,74)] text-[rgb(200,200,200)] pl-3 pr-[10px] py-[1px] h-[18px] rounded-l-md focus:rounded-md border-t-[rgb(22,22,22)] border-t-[0.8px] border-b-[rgb(47,47,47)] border-b-[0.8px] border-x-[rgb(17,17,17)] border-x-[0.8px] text-[11px]">ASCII</button>
+            <button class="bg-[rgb(13,13,13)] cursor-default select-none active:bg-[rgb(107,107,107)] focus:bg-[rgb(74,74,74)] text-[rgb(200,200,200)] pr-2 pl-[10px] py-[1px] h-[18px] rounded-r-md focus:rounded-md border-t-[rgb(22,22,22)] border-t-[0.8px] border-b-[rgb(47,47,47)] border-b-[0.8px] border-x-[rgb(17,17,17)] border-x-[0.8px] text-[11px]">Unicode</button>
+        </div>
+        <div class="flex justify-center items-center">
+            <button class="bg-[rgb(100,100,99)] cursor-default select-none active:bg-[rgb(133,133,132)] text-[rgb(200,200,200)] text-center text-[11px] mr-8 px-2 h-4 border-t-[rgb(124,123,122)] border-t-[1px] rounded-[4px] ">Hide Binary</button>
+        </div>
+        <div class=" grid grid-cols-3 bg-[rgb(13,13,13)] rounded-[4px] border-t-[rgb(22,22,22)] border-t-[1px]  h-[16px]  border-x-[rgb(39,38,37)] border-x-[1px] border-b-[rgb(47,47,47)] border-b-[10px]">
+            <button class="flex justify-center items-center cursor-default select-none bg-[rgb(74,74,74)] active:bg-[rgb(107,107,107)] focus:bg-[rgb(74,74,74)] text-[rgb(200,200,200)] rounded-[4px] focus:rounded-[4px] h-[16px] text-[11px] px-1 w-[26.7px] ">8</button>
+            <button class="flex justify-center items-center cursor-default select-none bg-[rgb(13,13,13)] active:bg-[rgb(107,107,107)] focus:bg-[rgb(74,74,74)] text-[rgb(200,200,200)] h-[16px] focus:rounded-[4px] text-[11px] px-2 w-[26.7px] ">10</button>
+            <button class="flex justify-center items-center cursor-default select-none bg-[rgb(13,13,13)] active:bg-[rgb(107,107,107)] focus:bg-[rgb(74,74,74)] text-[rgb(200,200,200)] rounded-r-[4px] focus:rounded-[4px] h-[16px] text-[11px] px-2 w-[26.7px] ">16</button>
+        </div>
+    </div>
+    <div>
+    <div class="grid grid-cols-8 px-[18px] cursor-default select-none">
+        <div class="text-[rgb(122,122,122)] pt-[14px] text-[11px]"><span class=" px-[0.9px]">0</span><span class=" px-[0.9px]">0</span><span class=" px-[0.9px]">0</span><span class=" px-[0.9px]">0</span></div>
+        <div class="text-[rgb(122,122,122)] pt-[14px] text-[11px]"><span class=" px-[0.9px]">0</span><span class=" px-[0.9px]">0</span><span class=" px-[0.9px]">0</span><span class=" px-[0.9px]">0</span></div>
+        <div class="text-[rgb(122,122,122)] pt-[14px] text-[11px]"><span class=" px-[0.9px]">0</span><span class=" px-[0.9px]">0</span><span class=" px-[0.9px]">0</span><span class=" px-[0.9px]">0</span></div>
+        <div class="text-[rgb(122,122,122)] pt-[14px] text-[11px]"><span class=" px-[0.9px]">0</span><span class=" px-[0.9px]">0</span><span class=" px-[0.9px]">0</span><span class=" px-[0.9px]">0</span></div>
+        <div class="text-[rgb(122,122,122)] pt-[14px] text-[11px]"><span class=" px-[0.9px]">0</span><span class=" px-[0.9px]">0</span><span class=" px-[0.9px]">0</span><span class=" px-[0.9px]">0</span></div>
+        <div class="text-[rgb(122,122,122)] pt-[14px] text-[11px]"><span class=" px-[0.9px]">0</span><span class=" px-[0.9px]">0</span><span class=" px-[0.9px]">0</span><span class=" px-[0.9px]">0</span></div>
+        <div class="text-[rgb(122,122,122)] pt-[14px] text-[11px]"><span class=" px-[0.9px]">0</span><span class=" px-[0.9px]">0</span><span class=" px-[0.9px]">0</span><span class=" px-[0.9px]">0</span></div>
+        <div class="text-[rgb(122,122,122)] pt-[14px] text-[11px]"><span class=" px-[0.9px]">0</span><span class=" px-[0.9px]">0</span><span class=" px-[0.9px]">0</span><span class=" px-[0.9px]">0</span></div>
+    </div>
+        <div class="flex justify-between px-[18px] cursor-default select-none ">
+            <div class="text-[rgb(233,233,233)] text-[11.5px]">63</div>
+            <div class="text-[rgb(233,233,233)] ml-[14px] text-[11.5px]">47</div>
+            <div class="text-[rgb(233,233,233)] text-[11.5px]">32</div>
+            
+        </div>
+    </div>
+    
+    <div>
+        <div class="grid grid-cols-8 px-[18px] cursor-default select-none">
+            <div class="text-[rgb(122,122,122)] text-[11px]"><span class=" px-[0.9px]">0</span><span class=" px-[0.9px]">0</span><span class=" px-[0.9px]">0</span><span class=" px-[0.9px]">0</span></div>
+            <div class="text-[rgb(122,122,122)] text-[11px]"><span class=" px-[0.9px]">0</span><span class=" px-[0.9px]">0</span><span class=" px-[0.9px]">0</span><span class=" px-[0.9px]">0</span></div>
+            <div class="text-[rgb(122,122,122)] text-[11px]"><span class=" px-[0.9px]">0</span><span class=" px-[0.9px]">0</span><span class=" px-[0.9px]">0</span><span class=" px-[0.9px]">0</span></div>
+            <div class="text-[rgb(122,122,122)] text-[11px]"><span class=" px-[0.9px]">0</span><span class=" px-[0.9px]">0</span><span class=" px-[0.9px]">0</span><span class=" px-[0.9px]">0</span></div>
+            <div class="text-[rgb(122,122,122)] text-[11px]"><span class=" px-[0.9px]">0</span><span class=" px-[0.9px]">0</span><span class=" px-[0.9px]">0</span><span class=" px-[0.9px]">0</span></div>
+            <div class="text-[rgb(122,122,122)] text-[11px]"><span class=" px-[0.9px]">0</span><span class=" px-[0.9px]">0</span><span class=" px-[0.9px]">0</span><span class=" px-[0.9px]">0</span></div>
+            <div class="text-[rgb(122,122,122)] text-[11px]"><span class=" px-[0.9px]">0</span><span class=" px-[0.9px]">0</span><span class=" px-[0.9px]">0</span><span class=" px-[0.9px]">0</span></div>
+            <div class="text-[rgb(122,122,122)] text-[11px]"><span class=" px-[0.9px]">0</span><span class=" px-[0.9px]">0</span><span class=" px-[0.9px]">0</span><span class=" px-[0.9px]">0</span></div>
+        </div>
+            <div class="flex justify-between px-[18px] cursor-default select-none">
+                <div class="text-[rgb(233,233,233)] text-[11.5px]">31</div>
+                <div class="text-[rgb(233,233,233)] ml-[9px] text-[11.5px]">15</div>
+                <div class="text-[rgb(233,233,233)] mr-1 text-[11.5px]">0</div>
+                
+            </div>
+        </div>
+
+    
+
+    </div>
+
+
+
+
+    <!-- last section -->
+
+    <div class="grid grid-cols-7 grid-flow-row gap-0 w-[398px]">
+        <!-- 1 -->
+
+        <div class="bg-[rgb(62,61,60)] active:bg-[rgb(92,92,91)] h-[46.4px] border-[rgb(40,40,39)] border-[0.1px] p-2 text-[rgb(225,225,225)] cursor-default select-none text-lg flex justify-center items-center">AND</div>
+        <div class="bg-[rgb(62,61,60)] active:bg-[rgb(92,92,91)] h-[46.4px] border-[rgb(40,40,39)] border-[0.1px] p-2 text-[rgb(225,225,225)] cursor-default select-none text-lg flex justify-center items-center">OR</div>
+        <div class="bg-[rgb(92,92,92)] h-[46.4px] border-[rgb(40,40,39)] border-[0.1px] p-2 text-[rgb(133,133,132)] cursor-default select-none text-lg flex justify-center items-center">D</div>
+        <div class="bg-[rgb(92,92,92)] h-[46.4px] border-[rgb(40,40,39)] border-[0.1px] p-2 text-[rgb(133,133,132)] cursor-default select-none text-lg flex justify-center items-center">E</div>
+        <div class="bg-[rgb(92,92,92)] h-[46.4px] border-[rgb(40,40,39)] border-[0.1px] p-2 text-[rgb(133,133,132)] cursor-default select-none text-lg flex justify-center items-center">F</div>
+        <div class="bg-[rgb(62,61,60)] active:bg-[rgb(92,92,91)] h-[46.4px] border-[rgb(40,40,39)] border-[0.1px] p-2 text-[rgb(225,225,225)] cursor-default select-none text-lg flex justify-center items-center">AC</div>
+        <div class="bg-[rgb(62,61,60)] active:bg-[rgb(92,92,91)] h-[46.4px] border-[rgb(40,40,39)] border-[0.1px] p-2 text-[rgb(225,225,225)] cursor-default select-none text-lg flex justify-center items-center">C</div>
+
+        <!-- 2 -->
+
+        <div class="bg-[rgb(62,61,60)] active:bg-[rgb(92,92,91)] h-[46.4px] border-[rgb(40,40,39)] border-[0.1px] p-2 text-[rgb(225,225,225)] cursor-default select-none text-lg flex justify-center items-center">NOR</div>
+        <div class="bg-[rgb(62,61,60)] active:bg-[rgb(92,92,91)] h-[46.4px] border-[rgb(40,40,39)] border-[0.1px] p-2 text-[rgb(225,225,225)] cursor-default select-none text-lg flex justify-center items-center">XOR</div>
+        <div class="bg-[rgb(92,92,92)] h-[46.4px] border-[rgb(40,40,39)] border-[0.1px] p-2 text-[rgb(133,133,132)] cursor-default select-none text-lg flex justify-center items-center">A</div>
+        <div class="bg-[rgb(92,92,92)] h-[46.4px] border-[rgb(40,40,39)] border-[0.1px] p-2 text-[rgb(133,133,132)] cursor-default select-none text-lg flex justify-center items-center">B</div>
+        <div class="bg-[rgb(92,92,92)] h-[46.4px] border-[rgb(40,40,39)] border-[0.1px] p-2 text-[rgb(133,133,132)] cursor-default select-none text-lg flex justify-center items-center">C</div>
+        <div class="bg-[rgb(62,61,60)] active:bg-[rgb(92,92,91)] h-[46.4px] border-[rgb(40,40,39)] border-[0.1px] p-2 text-[rgb(225,225,225)] cursor-default select-none text-lg flex justify-center items-center">RoL</div>
+        <div class="bg-[rgb(62,61,60)] active:bg-[rgb(92,92,91)] h-[46.4px] border-[rgb(40,40,39)] border-[0.1px] p-2 text-[rgb(225,225,225)] cursor-default select-none text-lg flex justify-center items-center">RoR</div>
+
+        <!-- 3 -->
+
+        <div class="bg-[rgb(62,61,60)] active:bg-[rgb(92,92,91)] h-[46.4px] border-[rgb(40,40,39)] border-[0.1px] p-2 text-[rgb(225,225,225)] cursor-default select-none text-lg flex justify-center items-center">&lt;&lt;</div>
+        <div class="bg-[rgb(62,61,60)] active:bg-[rgb(92,92,91)] h-[46.4px] border-[rgb(40,40,39)] border-[0.1px] p-2 text-[rgb(225,225,225)] cursor-default select-none text-lg flex justify-center items-center">>></div>
+        <div class="bg-[rgb(94,94,92)] active:bg-[rgb(160,159,157)] h-[46.4px] border-[rgb(40,40,39)] border-[0.1px] p-2 text-[rgb(225,225,225)] cursor-default select-none  text-[22px] flex justify-center items-center">7</div>
+        <div class="bg-[rgb(94,94,92)] active:bg-[rgb(160,159,157)] h-[46.4px] border-[rgb(40,40,39)] border-[0.1px] p-2 text-[rgb(133,133,132)] cursor-default select-none  text-[22px] flex justify-center items-center">8</div>
+        <div class="bg-[rgb(94,94,92)] active:bg-[rgb(160,159,157)] h-[46.4px] border-[rgb(40,40,39)] border-[0.1px] p-2 text-[rgb(133,133,132)] cursor-default select-none  text-[22px] flex justify-center items-center">9</div>
+        <div class="bg-[rgb(62,61,60)] active:bg-[rgb(92,92,91)] h-[46.4px] border-[rgb(40,40,39)] border-[0.1px] p-2 text-[rgb(225,225,225)] cursor-default select-none text-lg flex justify-center items-center">2's</div>
+        <div class="bg-[rgb(62,61,60)] active:bg-[rgb(92,92,91)] h-[46.4px] border-[rgb(40,40,39)] border-[0.1px] p-2 text-[rgb(225,225,225)] cursor-default select-none text-lg flex justify-center items-center">1's</div>
+
+        <!-- 4 -->
+
+
+        <div class="bg-[rgb(62,61,60)] active:bg-[rgb(92,92,91)] h-[46.4px] border-[rgb(40,40,39)] border-[0.1px] p-2 text-[rgb(225,225,225)] cursor-default select-none text-lg flex justify-center items-center">X&lt;&lt;Y</div>
+        <div class="bg-[rgb(62,61,60)] active:bg-[rgb(92,92,91)] h-[46.4px] border-[rgb(40,40,39)] border-[0.1px] p-2 text-[rgb(225,225,225)] cursor-default select-none text-lg flex justify-center items-center">X>>Y</div>
+        <div class="bg-[rgb(94,94,92)] active:bg-[rgb(160,159,157)] h-[46.4px] border-[rgb(40,40,39)] border-[0.1px] p-2 text-[rgb(225,225,225)] cursor-default select-none  text-[22px] flex justify-center items-center">4</div>
+        <div class="bg-[rgb(94,94,92)] active:bg-[rgb(160,159,157)] h-[46.4px] border-[rgb(40,40,39)] border-[0.1px] p-2 text-[rgb(225,225,225)] cursor-default select-none  text-[22px] flex justify-center items-center">5</div>
+        <div class="bg-[rgb(94,94,92)] active:bg-[rgb(160,159,157)] h-[46.4px] border-[rgb(40,40,39)] border-[0.1px] p-2 text-[rgb(225,225,225)] cursor-default select-none  text-[22px] flex justify-center items-center">6</div>
+        <div class="bg-[rgb(255,158,11)] active:bg-[rgb(203,125,4)] h-[46.4px] border-[rgb(40,40,39)] border-[0.1px] p-2 text-[rgb(225,225,225)] cursor-default select-none text-2xl flex justify-center items-center">÷</div>
+        <div class="bg-[rgb(255,158,11)] active:bg-[rgb(203,125,4)] h-[46.4px] border-[rgb(40,40,39)] border-[0.1px] p-2 text-[rgb(225,225,225)] cursor-default select-none text-2xl flex justify-center items-center">–</div>
+
+        <!-- 5 -->
+
+        <div class="col-span-2 bg-[rgb(62,61,60)] active:bg-[rgb(92,92,91)] h-[46.4px] border-[rgb(40,40,39)] border-[0.1px] p-2 text-[rgb(225,225,225)] cursor-default select-none text-lg flex justify-center items-center">byte flip</div>
+        <div class="bg-[rgb(94,94,92)] active:bg-[rgb(160,159,157)] h-[46.4px] border-[rgb(40,40,39)] border-[0.1px] p-2 text-[rgb(225,225,225)] cursor-default select-none  text-[22px] flex justify-center items-center">1</div>
+        <div class="bg-[rgb(94,94,92)] active:bg-[rgb(160,159,157)] h-[46.4px] border-[rgb(40,40,39)] border-[0.1px] p-2 text-[rgb(225,225,225)] cursor-default select-none  text-[22px] flex justify-center items-center">2</div>
+        <div class="bg-[rgb(94,94,92)] active:bg-[rgb(160,159,157)] h-[46.4px] border-[rgb(40,40,39)] border-[0.1px] p-2 text-[rgb(225,225,225)] cursor-default select-none  text-[22px] flex justify-center items-center">3</div>
+        <div class="bg-[rgb(255,158,11)] active:bg-[rgb(203,125,4)] h-[46.4px] border-[rgb(40,40,39)] border-[0.1px] p-2 text-[rgb(225,225,225)] cursor-default select-none  text-2xl flex justify-center items-center">×</div>
+        <div class="bg-[rgb(255,158,11)] active:bg-[rgb(203,125,4)] h-[46.4px] border-[rgb(40,40,39)] border-[0.1px] p-2 text-[rgb(225,225,225)] cursor-default select-none text-2xl flex justify-center items-center">+</div>
+
+        <!-- 6 -->
+
+
+        <div class="col-span-2 bg-[rgb(62,61,60)] active:bg-[rgb(92,92,91)] h-[46.4px] border-[rgb(40,40,39)] border-[0.1px] p-2 text-[rgb(225,225,225)] cursor-default select-none text-lg flex justify-center items-center rounded-bl-xl">word flip</div>
+        <div class="bg-[rgb(92,92,92)] h-[46.4px] border-[rgb(40,40,39)] border-[0.1px] p-2 text-[rgb(133,133,132)] cursor-default select-none text-lg flex justify-center items-center">FF</div>
+        <div class="bg-[rgb(94,94,92)] active:bg-[rgb(160,159,157)] h-[46.4px] border-[rgb(40,40,39)] border-[0.1px] p-2 text-[rgb(225,225,225)] cursor-default select-none  text-[22px] flex justify-center items-center">0</div>
+        <div class="bg-[rgb(94,94,92)] active:bg-[rgb(160,159,157)] h-[46.4px] border-[rgb(40,40,39)] border-[0.1px] p-2 text-[rgb(225,225,225)] cursor-default select-none  text-[22px] flex justify-center items-center">00</div>
+        <div class="col-span-2 bg-[rgb(255,158,11)] active:bg-[rgb(203,125,4)] h-[46.4px] border-[rgb(40,40,39)] border-[0.1px] p-2 text-[rgb(225,225,225)] cursor-default select-none  text-2xl flex justify-center items-center rounded-br-xl">=</div>
+
+
+    </div>
+</div>
+    
+</body>
+</html>
